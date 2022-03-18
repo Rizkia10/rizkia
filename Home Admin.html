@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title> Halaman Utama</title>
+    <link rel="stylesheet" href="Home Admin.css">
+    <link rel="stylesheet" type="text/css" href="themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+</head>
+<body>
+
+    <input type="checkbox" id="sidebar-toggle">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="img/Tober.jpg"width="35px" height="35px" alt="">
+            <h3 class="brand"> 
+            <span>TOBER SCHOOL</span>
+            </h3>
+            <label for="sidebar-toggle"class="ti-menu-alt"></label>
+        </div>
+
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="Home Admin.html">
+                        <span class="ti-home"></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Data Diri Guru.html">
+                        <span class="ti-user"></span>
+                        <span>Data Diri</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="ti-book"></span>
+                        <span>Data Keuangan</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="las la-sign-out-alt"></span>
+                        <span>Keluar</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="main-content">
+
+        <header>
+            <div class="search-wrapper">
+                <span class="ti-search" data-toggle="tooltip" title="Search"></span>
+                <input type="search" placeholder="Search">
+            </div>
+            
+            <div class="user-wrapper">
+                <span class="ti-bell" data-toggle="tooltip" title="Notifikasi"></span>
+                <span class="ti-comment" data-toggle="tooltip" title="Surat Masuk"></span>
+                <img src="img/Riz.jpg" width="40px" height="40px" alt="">
+                <div>
+                    <h4>Dewi Kinanti</h4>
+                    <small>Admin</small>
+                </div>
+            </div>
+        </header>
+
+         <main>
+
+            <h2 class=""> <span class="ti-home"></span>
+                <span>HOME</span>
+            </h2><hr>
+
+            <div class="dash-cards">
+                <div class="card-single">
+                    <div class="card-body">
+                        <div>
+                            <h5>PEMASUKAN</h5>
+                            <h4>2000K</h4>
+                        </div>
+                        <span class="ti-stats-up" style="background-color: #1A1E88;"></span>
+
+                    </div>
+                     <div class="card-footer" style="background-color: #1A1E88;" align="left">
+                        <a href=""> Selengkapnya</a>
+                        <span class="ti-stats-up" style="color: #fff;"></span>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div class="card-body">
+                        <div>
+                            <h5>PENGELUARAN</h5>
+                            <h4>2000K</h4>
+                        </div>
+                        <span class="ti-stats-down" style="background-color: #B61818;" ></span>
+
+                    </div>
+                    <div class="card-footer " style="background-color: #B61818;" align="left">
+                        <a href=""> Selengkapnya</a>
+                        <span class="ti-stats-down" style="color: #fff;"  ></span>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div class="card-body" align="left">
+                        <div>
+                            <h5> UANG SALDO</h5>
+                            <h4>2000K</h4>
+                        </div>
+                        <span class="ti-money" style="background-color: #31AE4D;"></span>
+
+                    </div>
+                    <div class="card-footer " style="background-color:#31AE4D ;" align="left">
+                        <a href=""> Selengkapnya</a>
+                        <span class="ti-money" style="color: #fff;" align-items="right"></span>
+                    </div>
+                </div>
+            </div>
+               
+               <section class="recent">
+                      <div class="graph-card">
+                          <h3 class="section-head"> Graph</h3>
+                          <div class="graph-content">
+                              <div class="graph-head">
+                                  <div class="graph-select">
+                                      <select name="operator" id="operator">
+                                          <option value="">2022</option>
+                                          <option value="">2023</option>
+                                      </select>
+                                  </div>
+                                  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+                                    <canvas id="myChart" style="width:100%;max-width:1000px"></canvas>
+
+                                <script>
+                                    var xValues = [100,200,300,400,500,600,700,800,900,1000];
+
+                                    new Chart("myChart", {
+                                    type: "line",
+                                    data: {
+                                        labels: xValues,
+                                        datasets: [{ 
+                                        data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+                                        borderColor: "red",
+                                        fill: false
+                                        }, { 
+                                        data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+                                        borderColor: "green",
+                                        fill: false
+                                        }, { 
+                                        data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+                                        borderColor: "blue",
+                                        fill: false
+                                        }]
+                                    },
+                                    options: {
+                                        responsive: true,
+                                        legend: {display: false 
+                                        }
+                                    }
+                                    });
+                                </script>
+                              </div>
+                              <div class="graph-board">
+                                  <canvas id="revenueChart" width="100%"></canvas>
+                              </div>
+                              
+                          </div>
+                      </div>
+                   </div>
+               </section>
+         </main>
+    </div>
+
+    <script type="text/javascript" src="dua.js" ></script>
+</body>
+</html>
